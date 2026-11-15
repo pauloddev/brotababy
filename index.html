@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brota Baby | Enxoval, Kids e Móveis em Manaíra, João Pessoa</title>
+<meta name="description" content="Brota Baby: universo infantil em Manaíra, João Pessoa. Enxoval, moda kids, móveis e utensílios para o bebê, com orientação para mamães e papais. Enviamos para todo Brasil.">
+<meta property="og:title" content="Brota Baby | Universo infantil">
+<meta property="og:description" content="Enxoval, moda kids e móveis. A essência do gerar e florescer em Jesus. Enviamos para todo Brasil.">
+<meta property="og:image" content="https://raw.githubusercontent.com/pauloddev/brotababy/main/img/marca/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pauloddev/brotababy/main/img/marca/og-cover.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFF6F2">
+<link rel="icon" href="img/marca/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosa:#F2CFD6; --rosa-claro:#FBE9EC; --rosa-forte:#C9647A;
+  --menta:#95D3D0; --menta-claro:#E3F4F3; --menta-forte:#2F8580;
+  --grafite:#3F3D43; --texto:#56535A; --pele:#FFE3D3; --creme:#FFF6F2; --branco:#fff;
+  --raio:28px; --sombra:0 18px 40px -22px rgba(63,61,67,.35);
+  --fonte-titulo:"Fredoka",system-ui,sans-serif; --fonte-texto:"Figtree",system-ui,sans-serif;
+  --largura:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fonte-texto);color:var(--texto);background:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--menta-forte);outline-offset:3px;border-radius:8px}
+.wrap{width:min(var(--largura),100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--fonte-titulo);color:var(--grafite);font-weight:500;line-height:1.12;letter-spacing:-.01em}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 .78rem/1 var(--fonte-texto);letter-spacing:.14em;text-transform:uppercase;color:var(--menta-forte);background:var(--menta-claro);padding:9px 14px;border-radius:99px}
+.secao{padding:clamp(72px,10vw,120px) 0;position:relative}
+.cabeca{max-width:680px;margin:0 auto clamp(36px,5vw,56px);text-align:center}
+.cabeca h2{font-size:clamp(2rem,4.4vw,3.1rem);margin:16px 0 14px}
+.cabeca p{font-size:1.08rem}
+.broto{display:block;margin:0 auto 4px;width:46px;height:34px}
+.broto path{stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 1.4s ease .2s}
+.visivel .broto path,.broto.visivel path{stroke-dashoffset:0}
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem/1 var(--fonte-texto);padding:17px 26px;border-radius:99px;transition:transform .25s ease,box-shadow .25s ease,background .25s;cursor:pointer;border:0}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-zap{background:var(--menta-forte);color:#fff;box-shadow:0 12px 26px -12px rgba(47,133,128,.7)}
+.btn-zap:hover{transform:translateY(-2px);background:#286f6b}
+.btn-claro{background:#fff;color:var(--grafite);box-shadow:inset 0 0 0 2px var(--rosa)}
+.btn-claro:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 2px var(--rosa-forte)}
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;background:var(--creme);display:grid;place-items:center;transition:opacity .6s ease,visibility .6s}
+#intro img{width:120px;animation:pulsar 1.1s ease-in-out infinite}
+#intro.sai{opacity:0;visibility:hidden}
+@keyframes pulsar{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+/* topo */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.rolou{background:rgba(255,246,242,.92);backdrop-filter:blur(10px);box-shadow:0 8px 24px -18px rgba(63,61,67,.4)}
+.topo{display:flex;align-items:center;justify-content:space-between;height:78px}
+.marca{display:flex;align-items:center;gap:10px}
+.marca .coracao{width:46px}
+.marca .nome{width:128px;height:auto}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{font-weight:600;font-size:.95rem;color:var(--grafite);position:relative;padding:6px 0}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--rosa-forte);transform:scaleX(0);transition:transform .25s}
+nav a:hover::after{transform:scaleX(1)}
+.topo .btn{padding:13px 20px;font-size:.92rem}
+.menu-btn{display:none;width:46px;height:46px;border-radius:50%;border:0;background:#fff;box-shadow:var(--sombra);cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--grafite);margin:4px auto;border-radius:2px}
+/* nuvens */
+.nuvens{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.nuvem{position:absolute;opacity:.9;animation:flutua linear infinite}
+@keyframes flutua{from{transform:translateX(-12vw)}to{transform:translateX(112vw)}}
+/* hero */
+.hero{padding:130px 0 70px;background:linear-gradient(180deg,var(--rosa-claro) 0%,var(--creme) 100%);position:relative;overflow:hidden}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.1rem);margin:22px 0 20px}
+.hero h1 em{font-style:normal;color:var(--rosa-forte)}
+.hero .sub{font-size:1.15rem;max-width:520px}
+.hero .fe{font-family:var(--fonte-titulo);color:var(--menta-forte);font-size:1.2rem;margin-top:14px}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.selos{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px}
+.selos span{display:flex;align-items:center;gap:9px;font-weight:600;font-size:.93rem;color:var(--grafite)}
+.selos svg{width:22px;height:22px;color:var(--menta-forte)}
+.arcos{display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative}
+.arco{border-radius:999px 999px var(--raio) var(--raio);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--sombra);border:8px solid #fff;background:#fff}
+.arco img,.arco video{width:100%;height:100%;object-fit:cover}
+.arcos .arco:nth-child(1){animation:boia 7s ease-in-out infinite}
+.arcos .arco:nth-child(2){animation:boia 7s ease-in-out infinite 3.5s}
+@keyframes boia{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.selo-coracao{position:absolute;left:50%;top:-34px;transform:translateX(-50%);width:92px;filter:drop-shadow(0 10px 16px rgba(63,61,67,.18));animation:bate 2.6s ease-in-out infinite;z-index:2}
+@keyframes bate{0%,100%{transform:translateX(-50%) scale(1)}12%{transform:translateX(-50%) scale(1.08)}24%{transform:translateX(-50%) scale(1)}}
+/* faixa */
+.faixa{background:var(--menta-forte);color:#fff;overflow:hidden;padding:18px 0}
+.faixa-trilho{display:flex;gap:46px;width:max-content;animation:corre 32s linear infinite;font-family:var(--fonte-titulo);font-size:1.3rem;white-space:nowrap}
+.faixa-trilho span{display:flex;align-items:center;gap:46px}
+.faixa-trilho span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--rosa)}
+@keyframes corre{to{transform:translateX(-50%)}}
+/* linhas da loja */
+.linhas{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.linha{background:#fff;border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;transition:transform .35s ease}
+.linha:hover{transform:translateY(-6px)}
+.linha .foto{aspect-ratio:4/5;overflow:hidden;border-radius:999px 999px 0 0;margin:14px 14px 0}
+.linha .foto img,.linha .foto video{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.linha:hover .foto img{transform:scale(1.05)}
+.linha .txt{padding:22px 26px 28px;text-align:center;flex:1}
+.linha h3{font-size:1.6rem;margin-bottom:6px}
+.linha .tag{font:700 .72rem/1 var(--fonte-texto);letter-spacing:.14em;text-transform:uppercase;color:var(--rosa-forte)}
+/* propósito */
+.proposito{background:var(--menta-claro)}
+.prop-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
+.prop-foto{position:relative}
+.prop-foto .arco{border-width:10px;border-radius:var(--raio);animation:none}
+.assinatura{position:absolute;left:50%;bottom:-22px;transform:translateX(-50%);background:#fff;border-radius:99px;padding:14px 26px;box-shadow:var(--sombra);text-align:center;white-space:nowrap}
+.assinatura strong{display:block;font-family:var(--fonte-titulo);font-weight:500;color:var(--grafite);font-size:1.12rem}
+.assinatura small{font-size:.82rem;color:var(--menta-forte);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+blockquote{font-family:var(--fonte-titulo);font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--grafite);line-height:1.22;margin:18px 0 20px}
+blockquote::before{content:"“";display:block;font-size:4.5rem;line-height:.6;color:var(--rosa-forte);margin-bottom:8px}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.pilar{background:#fff;border-radius:20px;padding:20px 16px;text-align:center}
+.pilar svg{width:30px;height:30px;color:var(--rosa-forte);margin:0 auto 10px}
+.pilar strong{display:block;font-family:var(--fonte-titulo);font-weight:500;color:var(--grafite);font-size:1.05rem;line-height:1.2}
+.pilar span{font-size:.88rem;display:block;margin-top:6px;line-height:1.45}
+/* galeria kids */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.quadro{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:var(--rosa-claro);box-shadow:var(--sombra)}
+.quadro img,.quadro video{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.quadro:hover img{transform:scale(1.05)}
+.quadro .play{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.88);display:grid;place-items:center}
+.quadro .play svg{width:14px;height:14px;color:var(--rosa-forte)}
+.centro{text-align:center;margin-top:40px}
+/* catálogo */
+.catalogo{background:#fff}
+.abas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:36px}
+.aba{font:600 .95rem/1 var(--fonte-texto);padding:13px 20px;border-radius:99px;border:2px solid var(--rosa);background:#fff;color:var(--grafite);cursor:pointer;transition:all .25s}
+.aba:hover{border-color:var(--rosa-forte)}
+.aba[aria-selected="true"]{background:var(--grafite);border-color:var(--grafite);color:#fff}
+.produtos{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.produto{width:calc((100% - 60px)/4);background:var(--creme);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s ease,opacity .35s ease}
+.produto:hover{transform:translateY(-5px)}
+.produto.some{display:none}
+.produto .foto{aspect-ratio:4/5;overflow:hidden}
+.produto .foto img{width:100%;height:100%;object-fit:cover}
+.produto .info{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.produto .cat{font:700 .68rem/1 var(--fonte-texto);letter-spacing:.14em;text-transform:uppercase;color:var(--menta-forte)}
+.produto h3{font-size:1.12rem;margin:8px 0 14px;flex:1}
+.produto a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--menta-forte);background:var(--menta-claro);border-radius:99px;padding:11px;transition:background .25s,color .25s}
+.produto a:hover{background:var(--menta-forte);color:#fff}
+.produto a svg{width:17px;height:17px}
+.nota{text-align:center;margin-top:30px;font-size:.95rem}
+/* móveis */
+.moveis{background:var(--rosa-claro)}
+/* clientes */
+.cli-grid{display:grid;grid-template-columns:1fr 1.25fr .625fr;gap:20px;align-items:stretch}
+.cli-texto{display:flex;flex-direction:column;justify-content:center;padding-right:10px}
+.cli-texto h2{font-size:clamp(2rem,3.8vw,2.9rem);margin:16px 0}
+.cli-texto p+p{margin-top:12px}
+.cli-destaque{aspect-ratio:4/5;border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra)}
+.cli-destaque img{width:100%;height:100%;object-fit:cover}
+.cli-dupla{display:flex;flex-direction:column;gap:20px}
+.cli-dupla div{flex:1;border-radius:22px;overflow:hidden;box-shadow:var(--sombra);min-height:0}
+.cli-dupla img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.carrossel{margin-top:44px;position:relative}
+.trilho{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 2px 18px}
+.trilho::-webkit-scrollbar{display:none}
+.trilho figure{flex:0 0 calc((100% - 72px)/5);scroll-snap-align:start;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:var(--sombra)}
+.trilho img{width:100%;height:100%;object-fit:cover}
+.setas{display:flex;justify-content:center;gap:12px;margin-top:10px}
+.seta{width:52px;height:52px;border-radius:50%;border:2px solid var(--rosa);background:#fff;cursor:pointer;display:grid;place-items:center;color:var(--grafite);transition:all .25s}
+.seta:hover{background:var(--grafite);color:#fff;border-color:var(--grafite)}
+.seta svg{width:20px;height:20px}
+/* depoimentos */
+.depo{background:var(--menta-claro)}
+.depo-longos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:22px}
+.depo-curtos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.balao{background:#fff;border-radius:24px 24px 24px 6px;padding:26px 24px 22px;box-shadow:var(--sombra);display:flex;flex-direction:column;position:relative}
+.balao p{color:var(--grafite);font-size:1.02rem;flex:1}
+.depo-longos .balao p{font-size:1rem}
+.balao .quem{display:flex;align-items:center;gap:10px;margin-top:18px;padding-top:14px;border-top:1px dashed var(--rosa);font-size:.85rem;font-weight:600}
+.balao .quem svg{width:18px;height:18px;color:var(--rosa-forte);flex:none}
+.balao .estrelas{color:#E8A93C;letter-spacing:2px;font-size:.9rem;margin-bottom:10px}
+/* envio */
+.envio{background:var(--grafite);color:#fff;border-radius:var(--raio);padding:clamp(34px,5vw,56px);display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}
+.envio h2{color:#fff;font-size:clamp(1.7rem,3.2vw,2.4rem)}
+.envio p{color:#dcd8de;margin-top:6px}
+.envio .caixa{width:84px;height:84px;border-radius:50%;background:var(--rosa);display:grid;place-items:center;color:var(--grafite)}
+.envio .caixa svg{width:40px;height:40px}
+/* visite */
+.visite-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.fachada{border-radius:999px 999px var(--raio) var(--raio);overflow:hidden;box-shadow:var(--sombra);border:8px solid #fff;min-height:100%}
+.fachada img{width:100%;height:100%;object-fit:cover}
+.info-loja{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);padding:22px;display:flex;flex-direction:column;gap:18px}
+.mapa{border-radius:20px;overflow:hidden;aspect-ratio:16/10;background:var(--menta-claro) url("img/marca/heart.png") center/90px no-repeat;position:relative}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.linha-info{display:flex;gap:14px;align-items:flex-start}
+.linha-info svg{width:24px;height:24px;color:var(--rosa-forte);flex:none;margin-top:2px}
+.linha-info strong{display:block;font-family:var(--fonte-titulo);font-weight:500;color:var(--grafite);font-size:1.1rem}
+.horario{width:100%;border-collapse:collapse;margin-top:6px;font-size:.95rem}
+.horario td{padding:6px 0;border-bottom:1px dashed var(--rosa)}
+.horario td:last-child{text-align:right;font-weight:600;color:var(--grafite)}
+.rotas{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:auto}
+.rotas .btn{padding:15px 12px;font-size:.95rem}
+.btn-waze{background:#33CCFF;color:#062b3a}
+.btn-waze:hover{transform:translateY(-2px);background:#1fb9ee}
+.btn-maps{background:var(--grafite);color:#fff}
+.btn-maps:hover{transform:translateY(-2px);background:#2a282d}
+/* rodapé */
+footer{background:var(--rosa-claro);padding:64px 0 28px;margin-top:20px}
+.rod-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+.rod-grid h4{font-family:var(--fonte-titulo);font-weight:500;color:var(--grafite);font-size:1.15rem;margin-bottom:14px}
+.rod-grid li{list-style:none;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;font-size:.95rem}
+.rod-grid li svg{width:19px;height:19px;color:var(--rosa-forte);flex:none;margin-top:3px}
+.rod-grid a:hover{color:var(--rosa-forte)}
+.rod-base{margin-top:46px;padding-top:22px;border-top:1px solid var(--rosa);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem}
+.zap-flutuante{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 28px -10px rgba(37,211,102,.7);transition:transform .25s}
+.zap-flutuante:hover{transform:scale(1.08)}
+.zap-flutuante svg{width:32px;height:32px}
+.zap-flutuante::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:onda 2.4s ease-out infinite}
+@keyframes onda{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+/* revelar */
+.revela{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.revela.visivel{opacity:1;transform:none}
+.atraso-1{transition-delay:.1s}.atraso-2{transition-delay:.2s}.atraso-3{transition-delay:.3s}
+/* responsivo */
+@media (max-width:1020px){
+  nav,.topo>.btn{display:none}
+  .menu-btn{display:block}
+  nav.aberto{display:block;position:absolute;top:78px;left:20px;right:20px;background:#fff;border-radius:22px;box-shadow:var(--sombra);padding:18px}
+  nav.aberto ul{flex-direction:column;gap:6px}
+  nav.aberto a{display:block;padding:12px}
+  .hero-grid,.prop-grid,.visite-grid{grid-template-columns:1fr}
+  .hero{padding-top:110px}
+  .arcos{margin-top:46px}
+  .galeria{grid-template-columns:repeat(2,1fr)}
+  .produto{width:calc((100% - 40px)/3)}
+  .cli-grid{grid-template-columns:2fr 1fr}
+  .cli-texto{grid-column:1/-1;text-align:center;padding:0}
+  .trilho figure{flex-basis:calc((100% - 36px)/3)}
+  .depo-longos{grid-template-columns:1fr}
+  .depo-curtos{grid-template-columns:repeat(2,1fr)}
+  .envio{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .rod-grid{grid-template-columns:1fr 1fr}
+  .fachada{aspect-ratio:4/5}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 32px)}
+  .linhas{grid-template-columns:1fr}
+  .pilares{grid-template-columns:1fr}
+  .produto{width:calc((100% - 14px)/2)}
+  .produtos{gap:14px}
+  .produto h3{font-size:1rem}
+  .produto .info{padding:12px 12px 14px}
+  .produto a{font-size:.82rem;padding:10px 6px}
+  .galeria{gap:12px}
+  .cli-grid{gap:12px}
+  .cli-dupla{gap:12px}
+  .trilho figure{flex-basis:calc((100% - 18px)/2)}
+  .depo-curtos{grid-template-columns:1fr}
+  .rod-grid{grid-template-columns:1fr}
+  .rotas{grid-template-columns:1fr}
+  .hero .acoes .btn{width:100%}
+  .assinatura{padding:12px 20px}
+  .marca .nome{width:108px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .revela{opacity:1;transform:none}
+  .broto path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<div id="intro" aria-hidden="true"><img src="img/marca/heart.png" alt=""></div>
+
+<!-- Ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 1 1 6.99 3.86Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.34.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31 2.8 2.8 0 0 0-.87 2.08c0 1.22.89 2.41 1.02 2.57.12.17 1.76 2.68 4.25 3.76 1.58.68 2.2.74 2.99.62.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-caixa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 7.5 12 12l9-4.5M12 12v9M7.5 5.3l9 4.5"/></symbol>
+  <symbol id="i-loja" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 9.5V20h16V9.5M3 9.5 5 4h14l2 5.5a2.5 2.5 0 0 1-4.5 1.5 2.5 2.5 0 0 1-4.5 0 2.5 2.5 0 0 1-4.5 0A2.5 2.5 0 0 1 3 9.5ZM9.5 20v-5h5v5"/></symbol>
+  <symbol id="i-coracao" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.6 4.6 4.6 0 0 1 20 9.5c0 6.1-8 11-8 11Z"/></symbol>
+  <symbol id="i-livro" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5Zm0 0v13"/></symbol>
+  <symbol id="i-berco" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 5v15M20 5v15M4 9h16M4 17h16M8 9v8M12 9v8M16 9v8"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-email" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12-7.5L7 4.5Z"/></symbol>
+  <symbol id="i-esq" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-dir" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-nuvem" viewBox="0 0 120 60"><path fill="#fff" d="M30 55a22 22 0 0 1-2-44 26 26 0 0 1 48-4 20 20 0 0 1 30 18 15 15 0 0 1-2 30Z"/></symbol>
+  <symbol id="i-broto" viewBox="0 0 46 34"><path d="M23 33V15M23 16C23 7 16 3 6 4c0 9 7 13 17 12M23 13c0-8 6-12 16-12 0 9-6 13-16 12" fill="none" stroke="#2F8580" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header id="topo">
+  <div class="wrap topo">
+    <a href="#inicio" class="marca" aria-label="Brota Baby, início">
+      <img class="coracao" src="img/marca/heart.png" alt="" width="46" height="41">
+      <img class="nome" src="img/marca/wordmark-dark.png" alt="Brota Baby" width="128" height="24">
+    </a>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#loja">A loja</a></li>
+        <li><a href="#kids">Moda kids</a></li>
+        <li><a href="#catalogo">Utensílios</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#visite">Visite</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-zap" href="https://api.whatsapp.com/message/WGS4CWV6TZQHB1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener"><svg><use href="#i-zap"/></svg>Falar com a loja</a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="inicio">
+<!-- HERO -->
+<section class="hero">
+  <div class="nuvens" aria-hidden="true">
+    <svg class="nuvem" style="top:16%;width:150px;animation-duration:70s;animation-delay:-20s"><use href="#i-nuvem"/></svg>
+    <svg class="nuvem" style="top:62%;width:110px;animation-duration:90s;animation-delay:-55s"><use href="#i-nuvem"/></svg>
+    <svg class="nuvem" style="top:38%;width:80px;animation-duration:110s;animation-delay:-5s;opacity:.7"><use href="#i-nuvem"/></svg>
+  </div>
+  <div class="wrap hero-grid">
+    <div class="revela">
+      <span class="eyebrow">Universo infantil · Manaíra, João Pessoa</span>
+      <h1>Enxoval, moda kids e móveis para o bebê que está <em>brotando</em>.</h1>
+      <p class="sub">Uma loja completa pra você: do primeiro body ao quartinho montado, com uma equipe que orienta mamães e papais em cada escolha.</p>
+      <p class="fe">A essência do gerar e florescer em Jesus 🌷</p>
+      <div class="acoes">
+        <a class="btn btn-zap" href="https://wa.me/c/558381138607" target="_blank" rel="noopener"><svg><use href="#i-zap"/></svg>Ver o catálogo completo</a>
+        <a class="btn btn-claro" href="#visite"><svg><use href="#i-pin"/></svg>Visitar a loja</a>
+      </div>
+      <div class="selos">
+        <span><svg><use href="#i-caixa"/></svg>Enviamos para todo Brasil</span>
+        <span><svg><use href="#i-loja"/></svg>Loja física em Manaíra</span>
+      </div>
+    </div>
+    <div class="arcos revela atraso-2">
+      <img class="selo-coracao" src="img/marca/heart.png" alt="" width="92" height="81">
+      <div class="arco"><img src="img/loja/arco-vestidos.webp" alt="Nicho em arco da Brota Baby com vestidos infantis bordados" width="864" height="1080" fetchpriority="high"></div>
+      <div class="arco"><img src="img/loja/quarto.webp" alt="Quarto de bebê montado no showroom da Brota Baby" width="864" height="1080" fetchpriority="high"></div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true">
+  <div class="faixa-trilho">
+    <span>Enxoval</span><span>Moda kids</span><span>Móveis</span><span>Utensílios</span><span>Higiene</span><span>Livrinhos</span><span>Enviamos para todo Brasil</span>
+    <span>Enxoval</span><span>Moda kids</span><span>Móveis</span><span>Utensílios</span><span>Higiene</span><span>Livrinhos</span><span>Enviamos para todo Brasil</span>
+  </div>
+</div>
+
+<!-- A LOJA -->
+<section class="secao" id="loja">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <svg class="broto"><use href="#i-broto"/></svg>
+      <span class="eyebrow">Enxoval e Kids | Móveis</span>
+      <h2>Uma loja completa pra você</h2>
+      <p>Três mundos debaixo do mesmo teto, para você resolver o enxoval, vestir com carinho e preparar o cantinho do bebê sem pular de loja em loja.</p>
+    </div>
+    <div class="linhas">
+      <article class="linha revela">
+        <div class="foto"><video src="video/arara.mp4" poster="video/arara.webp" muted loop playsinline preload="none" aria-label="Araras com roupinhas de bebê na loja"></video></div>
+        <div class="txt"><span class="tag">Enxoval</span><h3>Do primeiro dia em diante</h3><p>Bodies, conjuntinhos, saída de maternidade e os itens que a lista do enxoval pede.</p></div>
+      </article>
+      <article class="linha revela atraso-1">
+        <div class="foto"><img src="img/moda/vestido-lacos.webp" alt="Vestido infantil vermelho com gola bordada de laços" width="720" height="900" loading="lazy"></div>
+        <div class="txt"><span class="tag">Kids</span><h3>Moda que vira lembrança</h3><p>Vestidos com golas bordadas, peças clássicas e sapatinhos para as ocasiões especiais.</p></div>
+      </article>
+      <article class="linha revela atraso-2">
+        <div class="foto"><img src="img/loja/comoda.webp" alt="Cômoda e poltrona de amamentação no showroom" width="864" height="1080" loading="lazy"></div>
+        <div class="txt"><span class="tag">Móveis</span><h3>O quartinho dos sonhos</h3><p>Berços, cômodas, poltronas e guarda-roupas para montar o quarto com calma.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROPÓSITO / CEO -->
+<section class="secao proposito">
+  <div class="wrap prop-grid">
+    <div class="prop-foto revela">
+      <div class="arco"><img src="img/marca/ceo.webp" alt="Ana Adelaide Vasconcelos, CEO da Brota Baby" width="864" height="1080" loading="lazy"></div>
+      <div class="assinatura"><strong>Ana Adelaide Vasconcelos</strong><small>CEO da Brota Baby</small></div>
+    </div>
+    <div class="revela atraso-1">
+      <span class="eyebrow">Nosso propósito</span>
+      <blockquote>Somos mais que uma loja que vende enxoval. Levamos informações às mamães e papais.</blockquote>
+      <p>Na Brota Baby, cada atendimento começa com escuta. A gente explica o que é essencial em cada fase, ajuda a montar a lista sem exageros e acompanha a família do enxoval ao quartinho pronto.</p>
+      <div class="pilares">
+        <div class="pilar"><svg><use href="#i-livro"/></svg><strong>Orientação de verdade</strong><span>Informação para decidir com tranquilidade.</span></div>
+        <div class="pilar"><svg><use href="#i-berco"/></svg><strong>Tudo em um só lugar</strong><span>Enxoval, kids, utensílios e móveis.</span></div>
+        <div class="pilar"><svg><use href="#i-caixa"/></svg><strong>Para todo Brasil</strong><span>Compre pelo WhatsApp e receba em casa.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODA KIDS -->
+<section class="secao" id="kids">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <svg class="broto"><use href="#i-broto"/></svg>
+      <span class="eyebrow">Moda kids</span>
+      <h2>Golas bordadas, laços e cores de infância</h2>
+      <p>Peças com acabamento delicado para o dia a dia, festas e fotos que a família vai guardar.</p>
+    </div>
+    <div class="galeria">
+      <figure class="quadro revela"><img src="img/moda/vestido-flores.webp" alt="Vestido listrado rosa com gola de flores lilás e laço azul" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela atraso-1"><video src="video/vestidos.mp4" poster="video/vestidos.webp" muted loop playsinline preload="none" aria-label="Vestidos infantis com golas bordadas"></video><span class="play"><svg><use href="#i-play"/></svg></span></figure>
+      <figure class="quadro revela atraso-2"><img src="img/moda/vestido-limao.webp" alt="Vestido amarelo com gola bordada de limões" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela atraso-3"><img src="img/moda/vestido-cereja.webp" alt="Vestido listrado azul com gola bordada de cerejas" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela"><img src="img/moda/vestido-vinho.webp" alt="Vestido vinho com blusa de babados e cerejas bordadas" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela atraso-1"><img src="img/moda/vestido-floral.webp" alt="Vestido floral de cerejas com gola branca" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela atraso-2"><video src="video/sapatinhos.mp4" poster="video/sapatinhos.webp" muted loop playsinline preload="none" aria-label="Sapatinhos infantis dourados, vermelhos e brancos"></video><span class="play"><svg><use href="#i-play"/></svg></span></figure>
+      <figure class="quadro revela atraso-3"><img src="img/moda/body-floral.webp" alt="Macacãozinho floral de cerejas com laço de veludo" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela"><video src="video/laco.mp4" poster="video/laco.webp" muted loop playsinline preload="none" aria-label="Vestido rosa com laços de cetim"></video><span class="play"><svg><use href="#i-play"/></svg></span></figure>
+      <figure class="quadro revela atraso-1"><img src="img/moda/cabides.webp" alt="Cabides da Brota Baby com vestidos de golas bordadas" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela atraso-2"><img src="img/moda/vestido-lacos.webp" alt="Vestido vermelho com gola de laços e sapatinho de verniz" width="720" height="900" loading="lazy"></figure>
+      <figure class="quadro revela atraso-3"><video src="video/sapatinhos-vinho.mp4" poster="video/sapatinhos-vinho.webp" muted loop playsinline preload="none" aria-label="Sapatinhos infantis cor vinho"></video><span class="play"><svg><use href="#i-play"/></svg></span></figure>
+    </div>
+    <div class="centro revela"><a class="btn btn-zap" href="https://wa.me/558381138607?text=Ol%C3%A1!%20Vi%20a%20moda%20kids%20no%20site%20e%20gostaria%20de%20ver%20os%20modelos%20e%20tamanhos%20dispon%C3%ADveis." target="_blank" rel="noopener"><svg><use href="#i-zap"/></svg>Consultar modelos e tamanhos</a></div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="secao catalogo" id="catalogo">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <svg class="broto"><use href="#i-broto"/></svg>
+      <span class="eyebrow">Mini catálogo</span>
+      <h2>Utensílios que facilitam a rotina</h2>
+      <p>Alimentação, higiene, passeio, banho e leitura. Escolha o item e fale com a equipe para conferir cores e disponibilidade.</p>
+    </div>
+    <div class="abas" role="tablist" aria-label="Categorias">
+      <button class="aba" role="tab" aria-selected="true" data-cat="todos">Todos</button>
+      <button class="aba" role="tab" aria-selected="false" data-cat="alimentacao">Alimentação</button>
+      <button class="aba" role="tab" aria-selected="false" data-cat="higiene">Higiene e cuidados</button>
+      <button class="aba" role="tab" aria-selected="false" data-cat="recem">Recém-nascido</button>
+      <button class="aba" role="tab" aria-selected="false" data-cat="passeio">Passeio</button>
+      <button class="aba" role="tab" aria-selected="false" data-cat="banho">Banho e leitura</button>
+    </div>
+    <div class="produtos" id="produtos"></div>
+    <p class="nota">Este é só um gostinho. O catálogo completo está no <a href="https://wa.me/c/558381138607" target="_blank" rel="noopener" style="color:var(--menta-forte);font-weight:700">WhatsApp da Brota Baby</a>.</p>
+  </div>
+</section>
+
+<!-- MÓVEIS -->
+<section class="secao moveis" id="moveis">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <svg class="broto"><use href="#i-broto"/></svg>
+      <span class="eyebrow">Móveis e passeio</span>
+      <h2>Do bebê conforto ao quartinho completo</h2>
+      <p>Veja de perto, toque nos acabamentos e monte o quarto com quem entende de primeira infância.</p>
+    </div>
+    <div class="galeria">
+      <figure class="quadro revela"><img src="img/loja/bebe-conforto.webp" alt="Bebês conforto expostos na parede com o letreiro Brota Baby" width="864" height="1080" loading="lazy"></figure>
+      <figure class="quadro revela atraso-1"><video src="video/berco.mp4" poster="video/berco.webp" muted loop playsinline preload="none" aria-label="Berço com acabamento em tecido no showroom"></video><span class="play"><svg><use href="#i-play"/></svg></span></figure>
+      <figure class="quadro revela atraso-2"><img src="img/loja/berco-portatil.webp" alt="Berços portáteis sob o coração símbolo da Brota Baby" width="864" height="1080" loading="lazy"></figure>
+      <figure class="quadro revela atraso-3"><img src="img/loja/arara.webp" alt="Arara com conjuntinhos infantis estampados" width="864" height="1080" loading="lazy"></figure>
+    </div>
+    <div class="centro revela"><a class="btn btn-zap" href="https://wa.me/558381138607?text=Ol%C3%A1!%20Quero%20ajuda%20para%20montar%20o%20quartinho%20do%20meu%20beb%C3%AA." target="_blank" rel="noopener"><svg><use href="#i-zap"/></svg>Quero ajuda com o quartinho</a></div>
+  </div>
+</section>
+
+<!-- CLIENTES -->
+<section class="secao" id="clientes">
+  <div class="wrap">
+    <div class="cli-grid">
+      <div class="cli-texto revela">
+        <span class="eyebrow">Nossas clientes</span>
+        <h2>Quem brota com a gente vira família</h2>
+        <p>Gestantes montando o primeiro enxoval, avós escolhendo presente, papais buscando o bebê conforto antes da maternidade.</p>
+        <p>Cada sacolinha que sai daqui leva um pedacinho de uma história, e é uma alegria fazer parte de tantas.</p>
+      </div>
+      <figure class="cli-destaque revela atraso-1"><img src="img/clientes/p03.webp" alt="Cliente gestante de vestido preto segurando a barriga na Brota Baby" width="720" height="900" loading="lazy"></figure>
+      <div class="cli-dupla revela atraso-2">
+        <div><img src="img/clientes/p01.webp" alt="Cliente gestante na Brota Baby" width="720" height="900" loading="lazy"></div>
+        <div><img src="img/clientes/p07.webp" alt="Cliente gestante entre as prateleiras da loja" width="720" height="900" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="carrossel revela">
+      <div class="trilho" id="trilho" tabindex="0" aria-label="Fotos de clientes"></div>
+      <div class="setas">
+        <button class="seta" data-dir="-1" aria-label="Anterior"><svg><use href="#i-esq"/></svg></button>
+        <button class="seta" data-dir="1" aria-label="Próximo"><svg><use href="#i-dir"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="secao depo" id="depoimentos">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <svg class="broto"><use href="#i-broto"/></svg>
+      <span class="eyebrow">Feedbacks</span>
+      <h2>O que as famílias contam pra gente</h2>
+      <p>Mensagens reais que recebemos no Instagram e no WhatsApp.</p>
+    </div>
+    <div class="depo-longos" id="depo-longos"></div>
+    <div class="depo-curtos" id="depo-curtos"></div>
+  </div>
+</section>
+
+<!-- ENVIO -->
+<section class="secao" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="envio revela">
+      <div class="caixa"><svg><use href="#i-caixa"/></svg></div>
+      <div><h2>Não está em João Pessoa? Enviamos para todo Brasil 📦</h2><p>Escolha pelo catálogo do WhatsApp, tire suas dúvidas com a equipe e receba em casa.</p></div>
+      <a class="btn btn-zap" href="https://wa.me/c/558381138607" target="_blank" rel="noopener"><svg><use href="#i-zap"/></svg>Abrir catálogo</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISITE -->
+<section class="secao" id="visite">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <svg class="broto"><use href="#i-broto"/></svg>
+      <span class="eyebrow">Visite a loja</span>
+      <h2>Venha conhecer a Brota Baby em Manaíra</h2>
+      <p>Estacionamento na frente da loja, inclusive com vagas preferenciais.</p>
+    </div>
+    <div class="visite-grid">
+      <figure class="fachada revela"><img src="img/loja/fachada.webp" alt="Fachada da loja Brota Baby na Avenida João Câncio da Silva, em Manaíra" width="900" height="1125" loading="lazy"></figure>
+      <div class="info-loja revela atraso-1">
+        <div class="mapa"><iframe title="Mapa da Brota Baby" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.%20Jo%C3%A3o%20C%C3%A2ncio%20da%20Silva%2C%20600%20-%20Mana%C3%ADra%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058038-341&output=embed"></iframe></div>
+        <div class="linha-info"><svg><use href="#i-pin"/></svg><div><strong>Endereço</strong>Av. João Câncio da Silva, 600 - Manaíra, João Pessoa - PB, 58038-341</div></div>
+        <div class="linha-info"><svg><use href="#i-relogio"/></svg><div style="flex:1"><strong>Horário de funcionamento</strong><div id="horario"></div></div></div>
+        <div class="rotas">
+          <a class="btn btn-maps" href="https://www.google.com/maps/search/Avenida%20Jo%C3%A3o%20C%C3%A2ncio%20da%20Silva%2C%20600%2C%20Manaira%2C%20Jo%C3%A3o%20Pessoa%20PB%2C%2058038-341%2C%20Brasil/@-7.109,-34.8325,17z?hl=pt-BR" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Abrir no Google Maps</a>
+          <a class="btn btn-waze" href="https://waze.com/ul?q=Av.%20Jo%C3%A3o%20C%C3%A2ncio%20da%20Silva%2C%20600%2C%20Mana%C3%ADra%2C%20Jo%C3%A3o%20Pessoa&navigate=yes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.1 2.5c4.9 0 8.8 3.6 8.8 8.3 0 3-1.4 4.8-3.3 6a2.3 2.3 0 0 1-4.4 1h-2.4a2.3 2.3 0 0 1-4.5-.4 7.6 7.6 0 0 1-3.2-3c.9 0 1.9-.4 1.9-2.3v-.9c0-5.2 3.6-8.7 7.1-8.7Zm-2.5 6.4a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm5 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm-5.2 3.6c.6 1.5 1.6 2.2 2.8 2.2s2.2-.7 2.8-2.2"/></svg>Abrir no Waze</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rod-grid">
+      <div>
+        <div class="marca" style="margin-bottom:16px"><img class="coracao" src="img/marca/heart.png" alt="" width="46" height="41"><img class="nome" src="img/marca/wordmark-dark.png" alt="Brota Baby" width="128" height="24"></div>
+        <p>Universo infantil 🌎💗<br>A essência do gerar e florescer em Jesus 🌷</p>
+        <p style="margin-top:10px;font-size:.9rem">CEO: Ana Adelaide Vasconcelos</p>
+      </div>
+      <div>
+        <h4>Fale com a gente</h4>
+        <ul>
+          <li><svg><use href="#i-zap"/></svg><a href="https://api.whatsapp.com/message/WGS4CWV6TZQHB1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener">+55 83 8113-8607</a></li>
+          <li><svg><use href="#i-insta"/></svg><a href="https://www.instagram.com/brotababy_/" target="_blank" rel="noopener">@brotababy_</a></li>
+          <li><svg><use href="#i-email"/></svg><a href="mailto:brotababy_@hotmail.com">brotababy_@hotmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Loja física</h4>
+        <ul>
+          <li><svg><use href="#i-pin"/></svg><span>Av. João Câncio da Silva, 600 - Manaíra, João Pessoa - PB, 58038-341</span></li>
+          <li><svg><use href="#i-caixa"/></svg><span>Enviamos para todo Brasil</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rod-base"><span>© <span id="ano"></span> Brota Baby. Enxoval e Kids | Móveis.</span><span>Feito com carinho em João Pessoa 💗</span></div>
+  </div>
+</footer>
+
+<a class="zap-flutuante" href="https://api.whatsapp.com/message/WGS4CWV6TZQHB1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg><use href="#i-zap"/></svg></a>
+
+<script>
+/* ===== Configuração editável ===== */
+const ZAP = "558381138607";
+/* Preencha com o horário real da loja. Ex.: ["Segunda a sexta","9h às 18h"] */
+const HORARIO = [];
+
+const PRODUTOS = [
+  ["talheres","Kit talheres cabo em silicone","alimentacao"],
+  ["colher-anatomica","Colher anatômica em silicone","alimentacao"],
+  ["colheres-treino","Kit 2 colheres de treinamento","alimentacao"],
+  ["colher-dosadora","Colher dosadora em silicone","alimentacao"],
+  ["babador","Babador em silicone com pega-migalhas","alimentacao"],
+  ["pratinho-ventosa","Pratinho em silicone com ventosa","alimentacao"],
+  ["pratinho-divisorias","Pratinho em silicone com divisórias","alimentacao"],
+  ["colher-dosadora-azul","Colher dosadora em silicone","alimentacao"],
+  ["higiene-bucal","Kit higiene bucal com protetor","higiene"],
+  ["aspirador","Aspirador nasal com estojo","higiene"],
+  ["lavador","Lavador nasal 250 ml","higiene"],
+  ["kit-cuidados","Kit cuidados com estojo","higiene"],
+  ["kit-touca-verde","Kit meia + luva + touca","recem"],
+  ["kit-touca-rosa","Kit meia + luva + touca","recem"],
+  ["prendedor","Kit prendedor de chupeta","recem"],
+  ["pote-termico","Pote térmico","passeio"],
+  ["garrafa-princesa","Garrafinha de alumínio","passeio"],
+  ["garrafa-foguete","Garrafinha de alumínio","passeio"],
+  ["porta-leite","Porta leite","passeio"],
+  ["tapete","Tapete antiderrapante","banho"],
+  ["livro-frutas","Livrinho de banho Conhecendo as Frutas","banho"],
+  ["livro-floresta","Livrinho de banho Animais da Floresta","banho"],
+  ["livro-ursinho","Livrinho de banho Um dia com o Ursinho","banho"],
+  ["livro-mar","Livrinho de banho Conhecendo o Fundo do Mar","banho"]
+];
+const CATS = {alimentacao:"Alimentação",higiene:"Higiene e cuidados",recem:"Recém-nascido",passeio:"Passeio",banho:"Banho e leitura"};
+
+const CLIENTES = ["p02","p04","p05","p06","p08","p09","p10","p11","v01","v02","v03","v04","v05","v06","v07","v08","v09","v10","v11","v12","v13"];
+
+const DEPO_LONGOS = [
+  ["Ameiii meus pedidos.. passando só para te elogiar e dizer que você é merecedora de todo sucesso na loja física da Brota baby.. seu carinho e atenção por seus clientes continua o mesmo de sempre! Sou muito feliz em poder contar com vc para o bem estar e conforto do meu bebê que merece o melhor! E você pode ajudar a proporcionar isso! Deus te abençoe grandemente... E até às próximas comprinhas 😍💕❣️","Cliente · WhatsApp"],
+  ["Oi, boa tarde, fui hoje na loja comprar umas coisas pra presentear. Gostaria de elogiar o atendimento das meninas. Fui muito bem recebida, ótimo atendimento, paciência, impossível levar só 01 coisa. Estão de parabéns 🙏🙌👏","Cliente · WhatsApp"],
+  ["Amei o atendimento e a agilidade. Sou mãe atípica e tenho duas filhas, praticidade na minha vida é essencial. Gostei porque vocês são educadas e objetivas ao mesmo tempo.","Cliente · WhatsApp"]
+];
+const DEPO_CURTOS = [
+  ["Atendimento de excelência, prazo de entrega espetacular, super recomendo! ❤️","Kely · Instagram"],
+  ["Diga a ela que me senti super bem atendida, amamos o bebê conforto e deu certinho no carrinho! 🌹","Louise"],
+  ["Obrigada pelo atendimento e pelo bilhete tão carinhoso, com certeza vocês ganharam uma cliente! 😘🌹","Anninha · WhatsApp"],
+  ["Meu amor! Eu ameiiiii. Gratidão por me atender tão em cima da hora 🙏❤️","Cliente · WhatsApp"],
+  ["Estamos amando essa caminha por aqui ❤️","Aline · Instagram"],
+  ["Essa poltrona é maravilhosa 😍😍😍","Laís · Instagram"],
+  ["Ameiiiii 💙💗","Marcília · quartinho dos gêmeos"],
+  ["As crianças amaram ❤️","Lillyan · WhatsApp"],
+  ["Obrigada pelo atendimento! O sapato é lindo 🤍","Cliente · Instagram"],
+  ["Atendimento impecável para delivery 🌸","Cliente · Instagram"],
+  ["Chegou sim, certinho. Lindos 🤍","Fabiana, de BH"],
+  ["Essa loja me dá vontade de gastar todo meu salário 😩","Cliente · Instagram"]
+];
+
+/* ===== Montagem ===== */
+const linkZap = t => `https://wa.me/${ZAP}?text=${encodeURIComponent(t)}`;
+const grade = document.getElementById("produtos");
+grade.innerHTML = PRODUTOS.map(([img,nome,cat])=>`
+  <article class="produto" data-cat="${cat}">
+    <div class="foto"><img src="img/prod/${img}.webp" alt="${nome}" width="600" height="750" loading="lazy"></div>
+    <div class="info"><span class="cat">${CATS[cat]}</span><h3>${nome}</h3>
+    <a href="${linkZap(`Olá! Vi no site o produto "${nome}" e gostaria de saber cores e disponibilidade.`)}" target="_blank" rel="noopener"><svg><use href="#i-zap"/></svg>Consultar no WhatsApp</a></div>
+  </article>`).join("");
+document.querySelectorAll(".aba").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".aba").forEach(x=>x.setAttribute("aria-selected","false"));
+  b.setAttribute("aria-selected","true");
+  const c=b.dataset.cat;
+  grade.querySelectorAll(".produto").forEach(p=>p.classList.toggle("some",c!=="todos"&&p.dataset.cat!==c));
+}));
+
+const trilho=document.getElementById("trilho");
+trilho.innerHTML=CLIENTES.map(c=>`<figure><img src="img/clientes/${c}.webp" alt="Cliente feliz com sua sacola Brota Baby" width="720" height="900" loading="lazy"></figure>`).join("");
+document.querySelectorAll(".seta").forEach(s=>s.addEventListener("click",()=>{
+  const f=trilho.querySelector("figure"); trilho.scrollBy({left:(f.offsetWidth+18)*Number(s.dataset.dir),behavior:"smooth"});
+}));
+let pausa=false; trilho.addEventListener("pointerenter",()=>pausa=true); trilho.addEventListener("pointerleave",()=>pausa=false);
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  setInterval(()=>{ if(pausa||document.hidden) return; const f=trilho.querySelector("figure");
+    const fim=trilho.scrollLeft+trilho.clientWidth>=trilho.scrollWidth-4;
+    trilho.scrollTo({left:fim?0:trilho.scrollLeft+f.offsetWidth+18,behavior:"smooth"}); },3200);
+}
+
+const balao=([t,q])=>`<article class="balao revela"><div class="estrelas" aria-hidden="true">★★★★★</div><p>${t}</p><div class="quem"><svg><use href="#i-coracao"/></svg>${q}</div></article>`;
+document.getElementById("depo-longos").innerHTML=DEPO_LONGOS.map(balao).join("");
+document.getElementById("depo-curtos").innerHTML=DEPO_CURTOS.map(balao).join("");
+
+const h=document.getElementById("horario");
+h.innerHTML = HORARIO.length
+  ? `<table class="horario">${HORARIO.map(([d,v])=>`<tr><td>${d}</td><td>${v}</td></tr>`).join("")}</table>`
+  : `<p>Confirme o horário de hoje antes de vir: <a href="${linkZap("Olá! Qual o horário de funcionamento da loja hoje?")}" target="_blank" rel="noopener" style="color:var(--menta-forte);font-weight:700">perguntar no WhatsApp</a>.</p>`;
+
+document.getElementById("ano").textContent=new Date().getFullYear();
+
+/* topo e menu */
+const topo=document.getElementById("topo");
+addEventListener("scroll",()=>topo.classList.toggle("rolou",scrollY>20),{passive:true});
+const mb=document.querySelector(".menu-btn"),menu=document.getElementById("menu");
+mb.addEventListener("click",()=>{const a=menu.classList.toggle("aberto");mb.setAttribute("aria-expanded",a)});
+menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{menu.classList.remove("aberto");mb.setAttribute("aria-expanded","false")}));
+
+/* revelar + vídeos sob demanda */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visivel");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".revela,.broto").forEach(el=>io.observe(el));
+const vo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target; if(e.isIntersecting){v.play().catch(()=>{})} else v.pause()}),{threshold:.35});
+document.querySelectorAll("video").forEach(v=>vo.observe(v));
+
+/* intro */
+addEventListener("load",()=>setTimeout(()=>document.getElementById("intro").classList.add("sai"),500));
+setTimeout(()=>document.getElementById("intro").classList.add("sai"),2500);
+</script>
+</body>
+</html>
